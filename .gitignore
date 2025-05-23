@@ -1,0 +1,26 @@
+# Visual Studio user-specific files
+.vs/
+*.user
+*.suo
+
+# Build results
+Debug/
+Release/
+x64/
+*.obj
+*.exe
+*.log
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+
+# Others
+*.pdb
+*.idb
+*.ipch
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.VC.db
