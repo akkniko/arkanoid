@@ -31,6 +31,7 @@ void Ball::launch() {
     }
 }
 
+
 void Ball::update(float dt) {
     ///реализаци€ случайного направлени€ движени€ м€чика, 7пункт из тз
     if (randomTrajectoryActive) {

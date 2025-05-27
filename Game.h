@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include <ctime>
+#include <algorithm>
 
 #include "Platform.h"
 #include "Ball.h"
@@ -12,6 +13,7 @@
 
 class Game {
 public:
+    static Game& instance();
     Game();
     void run();
     sf::Clock deltaClock;
@@ -21,7 +23,7 @@ private:
     void update(float dt);
     void render();
     void resetGame();      /// сброс состояния для перезапуска
-    void initText();       
+    void initText();
 
     sf::RenderWindow window;
     Platform paddle;
@@ -31,8 +33,7 @@ private:
     int score;
     int misses;
 
-
-    // Новые поля для жизней и текста
+    /// Новые поля для жизней и текста
     int lives;
     bool gameOver;
     sf::Font font;

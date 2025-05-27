@@ -15,6 +15,8 @@ public:
     sf::Vector2f velocity;
     bool stuck = true;
 
+    sf::CircleShape getShape() { return shape; };
+
     /// Для случайной траектории, 7 бонус
     bool randomTrajectoryActive = false;
     float randomTrajectoryTimer = 0.f;

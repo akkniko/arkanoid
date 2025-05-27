@@ -12,6 +12,7 @@ public:
     sf::Vector2f getAttachPosition(float radius) const;
 
     sf::RectangleShape shape;
+    sf::RectangleShape getShape() { return shape; };
     float paddleWidth;
     bool sticky = false;
     int allowedBottomPass = 0;

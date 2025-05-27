@@ -20,7 +20,7 @@ void Platform::draw(sf::RenderWindow& window) {
 
 void Platform::move(float dt) {
 
-    ///движение каретки по A и D, по стрелочкам неудобно.
+    ///движение каретки по A и D
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
         shape.move(-speed * dt, 0);
 
@@ -29,8 +29,6 @@ void Platform::move(float dt) {
 
     float x = shape.getPosition().x;
 
-    /// if x < min: return 0, else if x > max : return 700 - ...
-    /// просто чтобы не уходила за границы, чтобы много if не писать, одной функцией лучше
     x = std::clamp(x, 0.f, 700.f - paddleWidth);
 
     shape.setPosition(x, shape.getPosition().y);
@@ -45,6 +43,7 @@ void Platform::handleBallCollision(Ball& ball) {
         sticky = false;
     }
 }
+
 
 sf::Vector2f Platform::getAttachPosition(float radius) const {
     return 
